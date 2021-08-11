@@ -2,3 +2,6 @@
 
 **Feb 15, 2021**  
 Initial setup of my individual page.
+
+**Aug 11, 2021**
+Minor changes for personal information.
