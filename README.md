@@ -4,4 +4,7 @@
 Initial setup of my individual page.
 
 **Aug 11, 2021**  
-Minor changes for personal information.
+Minor changes for personal information.  
+
+**Aug 28, 2021**  
+Add my photo.
