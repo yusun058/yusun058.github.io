@@ -80,10 +80,10 @@
 /* container */
 
 .container {
-  width: 80%;
+  width: 65%;
   min-height: 1000px;
   max-height: 999999px; /* prevents font boosting */
-  margin: 20px auto 20px; /* top right bottom left */
+  margin: 10px auto 10px; /* top right bottom left */
   box-shadow: 0 0 7px #122b6d; /*527bbd;*/
   text-align: left;
   background: #fff;
