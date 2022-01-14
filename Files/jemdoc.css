@@ -80,13 +80,13 @@
 /* container */
 
 .container {
-  width: 65%;
+  width: 97%;
   min-height: 1000px;
   max-height: 999999px; /* prevents font boosting */
   margin: 10px auto 10px; /* top right bottom left */
-  box-shadow: 0 0 7px #122b6d; /*527bbd;*/
-  text-align: left;
-  background: #fff;
+  box-shadow: 0 0 0px #122b6d; /*527bbd;*/
+  text-align: justify;
+  background: rgb(255, 255, 255);
   padding: 14px 14px 14px 14px; /* top right bottom left */
   z-index: 1;
 }
