@@ -80,7 +80,8 @@
 /* container */
 
 .container {
-  width: 50%;
+  width: 980px;
+  /* width: 50%; */
   min-height: 1000px;
   max-height: 999999px; /* prevents font boosting */
   margin: 10px auto 10px; /* top right bottom left */
