@@ -10,7 +10,7 @@
 }
 
 .stick {
-  width: 20px;
+  width: 10px;
   height: 14px;
   border-radius: 1px;
   background-color: #8a9da8;
@@ -52,7 +52,7 @@
 }
 
 .menu a {
-  font-size: 110%;
+  font-size: 150%;
   /*font-weight: bolder;*/
   padding: 0.25ex 1.5ex;
   color: rgb(240, 240, 240);
@@ -80,12 +80,12 @@
 /* container */
 
 .container {
-  width: 97%;
+  width: 50%;
   min-height: 1000px;
   max-height: 999999px; /* prevents font boosting */
   margin: 10px auto 10px; /* top right bottom left */
   box-shadow: 0 0 0px #122b6d; /*527bbd;*/
-  text-align: justify;
+  text-align: left;
   background: rgb(255, 255, 255);
   padding: 14px 14px 14px 14px; /* top right bottom left */
   z-index: 1;
@@ -128,7 +128,7 @@ body {
   font-size: 1em;
   width: auto;
   white-space: nowrap;
-  text-align: left;
+  text-align: center;
   vertical-align: top;
 }
 
@@ -143,7 +143,7 @@ body {
   padding-right: 1em;
   border: none;
   background: white;
-  text-align: left;
+  text-align: center;
   vertical-align: top;
 }
 
