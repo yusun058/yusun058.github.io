@@ -45,7 +45,7 @@
   top: 0;
   width: 100%;
   padding: 12px 0px;
-  text-align: center;
+  text-align: left;
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -80,7 +80,7 @@
 /* container */
 
 .container {
-  width: 980px;
+  width: 1300px;
   /* width: 50%; */
   min-height: 1000px;
   max-height: 999999px; /* prevents font boosting */
@@ -129,7 +129,7 @@ body {
   font-size: 1em;
   width: auto;
   white-space: nowrap;
-  text-align: center;
+  text-align: left;
   vertical-align: top;
 }
 
@@ -144,7 +144,7 @@ body {
   padding-right: 1em;
   border: none;
   background: white;
-  text-align: center;
+  text-align: left;
   vertical-align: top;
 }
 
