@@ -329,6 +329,7 @@ p + ol {
 }
 
 li {
+  /* font-size: 115%; */
   margin: 0.3em;
 }
 
