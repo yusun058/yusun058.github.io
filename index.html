@@ -1,132 +1,318 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="robots" content="index, follow" />
-<meta name="keywords" content="Yu Sun, CUHK, SEEM, HK, PolyU, AMA" />
-<!-- <meta name="description" content="I am currently a postdoctoral fellow at the Hong Kong Polytechnic University." /> -->
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=0.5" />
-<link rel="stylesheet" href="./Files/jemdoc.css" type="text/css" />
-<!-- <link rel="icon" href="./Images/favicon.ico" type ="image/x-icon"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu Sun's Webpage</title>
+    <style>
+        html { 
+            font-size: 18px; /* Base font size for scaling */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            line-height: 1.6;
+            max-width: 1050px;
+            margin: 20px auto;
+        }
+        section {
+            padding: 5px 20px; /* Internal spacing */
+            margin: -5px; /* Remove default margins */
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: scale-down;
+            margin-right: 15px;
+        }
+        h1 {
+            font-size: 1.8em;
+            margin: 0;
+        }
+        h1 span {
+            font-size: 0.9em;
+            font-weight: normal;
+        }
+        p {
+            margin: 5px 0;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #333333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.0em;
+            color: #333333;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        ul.top-level {
+            list-style-type: none; /* Remove bullets for first-level list */
+            padding-left: 0; /* Align to the left for a clean look */
+        }
+        ul.top-level > li {
+            margin-bottom: 10px; /* Add space between items */
+        }
+        ul.sub-list {
+            list-style-type: disc; /* Keep bullets for nested lists */
+            padding-left: 20px; /* Indent nested lists */
+        }
+        .code {
+            font-family: 'Consolas', monospace; /*  Use monospaced font for code */
+            width: 85px; /* Fixed width for alignment */
+            display: inline-block; /* Keeps code in its own block */
+        }
+        .description {
+            flex: 1; /* Take the remaining space */
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0px; /* Space between profile and news */
+        }
+        .news {
+            font-weight: bold;
+            margin-top: 10px;
+            padding-left: 20px; /* Align this with Biography */
+        }
+        .abstract {
+            display: none; /* Hidden by default */
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9e9;
+            border-left: 4px solid #ccc;
+        }
+        .abstract-btn {
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .abstract-btn:hover {
+            text-decoration: underline;
+        }    
+        /* Style for grouped links */
+        .links-group {
+            font-weight: bold;
+        }
+        .links-group a {
+            color: #007bff; /* Blue color for links */
+            text-decoration: none; /* Remove underline */
+        }
+        .links-group a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+        .links-group span {
+            color: black; /* Vertical bar color */
+        }
+        /* Remove underline from all hyperlinks */
+        a {
+            text-decoration: none;
+            color: #007bff; /* Optional: Set a custom color */
+        }
+        /* Add an underline on hover for better accessibility */
+        a:hover {
+            text-decoration: underline;
+        }
+        .last-updated {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: gray;
+        }
+    </style>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Attach event listeners to all buttons with the class 'abstract-btn'
+            document.querySelectorAll('.abstract-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-target'); // Get the target ID
+                    const abstract = document.getElementById(targetId); // Find the corresponding abstract
 
-
-<title>Yu Sun</title>
+                    // Toggle display
+                    if (abstract.style.display === 'none' || abstract.style.display === '') {
+                        abstract.style.display = 'block'; // Show the abstract
+                    } else {
+                        abstract.style.display = 'none'; // Hide the abstract
+                    }
+                });
+            });
+        });
+    </script>
 </head>
+
 <body>
-<a id="home" class="anchor"></a>
-<div id="container"> 
-<div class="container"> 
-<table class="imgtable"><tr><td>
-<!-- <a href="./"><img src="./Images/photo_yusun.jpg" alt="" height="225px" /></a> -->
-<a href="./"><img src="./Images/HHKK6233-3.jpg" alt="" height="225px" /></a>
-&nbsp;</td>
-<td align="left"><p><font size="5">Yu Sun&nbsp;(</font><font size="5"; font style="font-family:LiHei Pro Mediumg">孙羽</font><font size="5">)</font>
-<br /><br />
-Postdoctoral Fellow
-<br /><br />
-Department of Applied Mathematics, The Hong Kong Polytechnic University
-<br /><br />
-Office:&nbsp; VA303, The Hong Kong Polytechnic University, Hung Hom, Kowloon, Hong Kong
-<br /><br />
-Email:&nbsp; yusun017[at]gmail.com;&nbsp;yu-hkpolyu.sun[at]polyu.edu.hk
-<br />
-</td></tr></table>
 
-<!-- <br /><br /> -->
-<!-- <font face="arial" color="blue" size="5">News: I am going to ...</font> -->
+    <section class="profile">
+        <img src="photo.jpg" alt="Yu Sun's Photo">
+        <div>
+            <h1>Yu Sun <span>(孙羽)</span></h1>
+            <p><strong>Postdoctoral Fellow</strong></p>
+            <p>Department of Applied Mathematics, The Hong Kong Polytechnic University</p>
+            <p>Office: VA303, The Hong Kong Polytechnic University, Hung Hom, Kowloon, Hong Kong</p>
+            <p>Email: yusun017[at]gmail.com; yu-hkpolyu.sun[at]polyu.edu.hk</p>
+        </div>
+    </section>
 
 
 
-<A NAME="Employment"><h2>Employment</h2></A>
-<ul>     
-     <li>2022 &mdash; 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Postdoctoral Fellow at the Hong Kong Polytechnic University</li>
-</ul>
-
-
- 
-<A NAME="Education"><h2>Education</h2></A>
-<ul>
-     <li> Ph.D. in Systems Engineering and Engineering Management, The Chinese University of Hong Kong, 2022, under the supervision of Prof. <a href="https://sites.google.com/site/xuedonghepage/home" target="_blank">Xuedong He</a>
-     <li> B.Sc. in Physics, Beijing Normal University, 2017
-</ul>
+    <!-- <p class="news">News: I will be joining Peking University HSBC Business School as a tenure-track assistant professor starting in Fall 2025.</p> -->
 
 
 
-<A NAME="Research Interests"><h2>Research Interests</h2></A>
-<ul>
-     <li>Behavioral Finance and Economics, Portfolio Selection, Asset Pricing, Decision Analysis, Insurance</li>
-     <li>Financial Technology, Reinforcement Learning</li>
-</ul>
+    <section>
+        <h2>Biography</h2>
+        <ul>
+            <li>2022 &mdash; 2025&nbsp;&nbsp; Postdoctoral Fellow, Department of Applied Mathematics, The Hong Kong Polytechnic University</li>
+            <li>2017 &mdash; 2022&nbsp;&nbsp; Ph.D. in Systems Engineering and Engineering Management (Financial Engineering track), The Chinese University of Hong Kong, under the supervision of Professor <a href="https://sites.google.com/site/xuedonghepage/home" target="_blank">Xuedong He</a>
+            <li>2013 &mdash; 2017&nbsp;&nbsp; B.Sc. in Physics, Beijing Normal University        
+        </ul>
+    </section>
 
 
 
-<A NAME="Working Paper"><h2>Working Papers</h2></A>
-<ul>
-     <li>Learning to Optimally Stop Diffusion Processes, with Financial Applications (with M. Dai, Z.Q. Xu and X.Y. Zhou):&nbsp; <strong><em>submitted</em></strong>, 2024. <a href="https://arxiv.org/abs/2408.09242" target="_blank">[arXiv]</a> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4928749" target="_blank">[SSRN]</a> </li>
-     <li>Dynamic Portfolio Selection and Asset Pricing under Neo-Additive Probability Weighting (with X.D. He):&nbsp; <strong><em>submitted</em></strong>, 2023. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4455110" target="_blank">[SSRN]</a></li>
-</ul>
+    <section>
+        <h2>Research Interests</h2>
+        <ul>
+            <li>Behavioral Finance and Economics, Portfolio Selection, Asset Pricing, Decision Analysis, Insurance</li>
+            <li>Financial Technology, Reinforcement Learning</li>
+            <li>Stochastic Control</li>
+        </ul>
+    </section>
 
 
 
-<!-- <A NAME="Work in Progress"><h2>Work in Progress</h2></A> -->
-<!-- <ul>
-     <li>A model with realization utility (with J. Fan and X.D. He), 2024.</li>
-     <li>Reinforcement learning for optimal investment problems with transaction costs, 2023.</li> -->
-<!-- </ul>  -->
+    <section>
+        <h2>Working Papers</h2>
+        <ul>
+            <li>Realization Utility Drives Diversification 
+                (with <a href="https://sites.google.com/view/jiacheng-fan/home?authuser=0" target="_blank">Jiacheng Fan</a> and <a href="https://sites.google.com/site/xuedonghepage/home" target="_blank">Xuedong He</a>):&nbsp; <strong><em>working paper</em></strong>, 2025. 
+            </li>
+
+            <li>Learning to Optimally Stop Diffusion Processes, with Financial Applications (with <a href="https://sites.google.com/view/mindai/home?authuser=0">Min Dai</a>, <a href="https://www.polyu.edu.hk/ama/profile/xu/">Zuoquan Xu</a> and <a href="https://www.columbia.edu/~xz2574/index.htm" target="_blank">Xunyu Zhou</a>):&nbsp; <strong><em>submitted</em></strong>, 2024. 
+                <span class="links-group">
+                    [<a class="abstract-btn" data-target="abstract_DaiSunXuZhou_Learning">Abstract</a>
+                    <span>|</span>
+                    <a href="https://arxiv.org/abs/2408.09242" target="_blank">arXiv</a>
+                    <span>|</span>
+                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4928749" target="_blank">SSRN</a>]
+                </span>
+                <div id="abstract_DaiSunXuZhou_Learning" class="abstract">
+                    <p>We study optimal stopping for diffusion processes with unknown model primitives within the continuous-time reinforcement learning (RL) framework developed by Wang et al. (2020), and present applications to option pricing and portfolio choice. By penalizing the corresponding variational inequality formulation, we transform the stopping problem into a stochastic optimal control problem with two actions. We then randomize controls into Bernoulli distributions and add an entropy regularizer to encourage exploration. We derive a semi-analytical optimal Bernoulli distribution, based on which we devise RL algorithms using the martingale approach established in Jia and Zhou (2022a), and prove a policy improvement theorem. We demonstrate the effectiveness of the algorithms in pricing finite-horizon American put options and in solving Merton's problem with transaction costs, and show that both the offline and online algorithms achieve high accuracy in learning the value functions and characterizing the associated free boundaries.</p>
+                </div>
+            </li>
+
+            <li>Dynamic Portfolio Selection and Asset Pricing under Neo-Additive Probability Weighting (with <a href="https://sites.google.com/site/xuedonghepage/home" target="_blank">Xuedong He</a>):&nbsp; <strong><em>submitted</em></strong>, 2023. 
+                <span class="links-group">
+                    [<a class="abstract-btn" data-target="abstract_HeSun_Dynamic">Abstract</a>
+                    <span>|</span>
+                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4455110" target="_blank">SSRN</a>]
+                </span>
+                <div id="abstract_HeSun_Dynamic" class="abstract">
+                    <p>We study a dynamic portfolio selection problem in which an agent trades a stock and a risk-free asset with the objective of maximizing the rank-dependent utility of her wealth at the terminal time of the investment horizon. Due to time inconsistency, we consider three types of agents, pre-committed, sophisticated, and naive agents, who differ from each other in whether they are aware of the time inconsistency and whether they have self-control. Assuming a neo-additive probability weighting function, we solve the strategies of these agents. We find that the pre-committed agent takes a loss-exit strategy, leading to a positively skewed terminal wealth, and the sophisticated agent is less willing to participate in the stock market than the pre-committed and naive agents. We also study equilibrium asset pricing and find that the stock return with a pre-committed representative agent exhibits a reversal effect and the initial stock price is lower than those in the case of a naive representative agent and in the case of a sophisticated representative agent.</p>
+                </div>
+        </ul>
+    </section>
 
 
 
-<A NAME="Talks and Presentations"><h2>Talks and Presentations</h2></A>
-<ul> 
-     <li>Research Seminar, Peking University HSBC Business School, Shenzhen, China, Dec 2024</li>
-     <li>2024 INFORMS Annual Meeting, Seattle, USA, Oct 2024</li>
-     <li>Research Seminar, School of Economics, Xiamen University, Xiamen, China, Sep 2024</li>
-     <li>The First INFORMS Conference on Financial Engineering and FinTech, The Hong Kong Polytechnic University, Hong Kong, China, Aug 2024</li>
-     <li>Eighth PKU-NUS Annual International Conference on Quantitative Finance and Economics, NUS (Suzhou) Research Institute, Suzhou, China, May 2024</li>
-     <li>The 2nd ORSHK Young Researchers Workshop, City University of Hong Kong, Hong Kong, China, Dec 2023</li>
-     <li>2023 INFORMS Annual Meeting, Phoenix, USA, Oct 2023</li>
-     <li>Seventh PKU-NUS Annual International Conference on Quantitative Finance and Economics, Peking University HSBC Business School, Shenzhen, China, May 2023</li>
-</ul>
+    <section>
+        <h2>Teaching</h2>
+        <ul class="top-level">
+            <!-- <li>
+                <strong>Instructor at Peking University HSBC Business School</strong>
+                <ul class="sub-list">
+                    <li>
+                        <span class="code">FIN519</span>
+                        <span class="description">Stochastic Finance (MA level, expected in Spring 2026)</span>
+                    </li>
+                    <li>
+                        <span class="code">FIN514</span>
+                        <span class="description">Applied Stochastic Processes (MA level, expected in Spring 2026)</span>
+                    </li>
+                </ul>
+            </li> -->
+
+            <li>
+                <strong>Teaching Assistant at the Chinese University of Hong Kong</strong>
+                <ul class="sub-list">
+                    <li>
+                        <span class="code">ECLT5920</span>
+                        <span class="description">Models and Decisions with Financial Applications (MSc level, Spring 2020)</span>
+                    </li>
+                                        <li>
+                        <span class="code">SEEM5820</span>
+                        <span class="description">Introduction to Financial Engineering (MSc level, Fall 2021)</span>
+                    </li>
+                    <li>
+                        <span class="code">ECLT5810</span>
+                        <span class="description">E-Commerce Data Mining Techniques (MSc level, Spring 2018)</span>
+                    </li>
+                    <li>
+                        <span class="code">SEEM3590</span>
+                        <span class="description">Investment Science (Undergraduate level, Fall 2019, 2020, 2021)</span>
+                    </li>
+                    <li>
+                        <span class="code">SEEM3580</span>
+                        <span class="description">Risk Analysis for Financial Engineering (Undergraduate level, Spring 2018)</span>
+                    </li>
+                    <li>
+                        <span class="code">ENGG2780</span>
+                        <span class="description">Statistics for Engineers (Undergraduate level, Spring 2021, 2022)</span>
+                    </li>
+                    <li>
+                        <span class="code">SEEM2602</span>
+                        <span class="description">Systems Engineering Practicum (Undergraduate level, Fall 2017, 2018)</span>
+                    </li>
+                    <li>
+                        <span class="code">FTEC2001</span>
+                        <span class="description">FinTech Regulation and Legal Policy (Undergraduate level, Spring 2019, 2020)</span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
 
 
 
-<A NAME="Teaching"><h2>Teaching</h2></A>
-<p>Teaching Assistant at CUHK:</p>
-     <ul> 
-          <li>SEEM5820/ECLT5920:&nbsp; Introduction to Financial Engineering (MSc, Fall 2021)</li>
-          <li>SEEM5820/ECLT5920:&nbsp; Models and Decisions with Financial Applications (MSc, Spring 2020)</li>
-          <li>SEEM5750/ECLT5810:&nbsp; E-Commerce Data Mining Techniques (MSc, Spring 2018)</li> 
-          <li>SEEM3590:&nbsp; Investment Science (Undergraduate, Fall 2019, 2020, 2021)</li>
-          <li>SEEM3580:&nbsp; Risk Analysis for Financial Engineering (Undergraduate, Spring 2018)</li>
-          <li>ENGG2780:&nbsp; Statistics for Engineers (Undergraduate, Spring 2021, 2022)</li>
-          <li>ENGG2602/SEEM2602:&nbsp; (Systems) Engineering Practicum (Undergraduate, Fall 2017, 2018)</li>
-          <li>FTEC2001:&nbsp; FinTech Regulation and Legal Policy (Undergraduate, Spring 2019, 2020)</li>
-     </ul>
+    <section>
+        <h2>Talks and Presentations</h2>
+        <ul>
+            <li>The Second ETH-HK-Imperial Joint Workshop on Quantitative Finance, Hong Kong, April 2025</li>
+            <li>Research Seminar, Peking University HSBC Business School, Shenzhen, December 2024</li>
+            <li>2024 INFORMS Annual Meeting, Seattle, October 2024</li>
+            <li>Research Seminar, School of Economics, Xiamen University, Xiamen, September 2024</li>
+            <li>The First INFORMS Conference on Financial Engineering and FinTech, The Hong Kong Polytechnic University, Hong Kong, August 2024</li>
+            <li>Eighth PKU-NUS Annual International Conference on Quantitative Finance and Economics, NUS (Suzhou) Research Institute, Suzhou, May 2024</li>
+            <li>The Second ORSHK Young Researchers Workshop, City University of Hong Kong, Hong Kong, December 2023</li>
+            <li>2023 INFORMS Annual Meeting, Phoenix, October 2023</li>
+            <li>Seventh PKU-NUS Annual International Conference on Quantitative Finance and Economics, Peking University HSBC Business School, Shenzhen, May 2023</li>
+        </ul>
+    </section>
 
 
 
-<A NAME="Awards"><h2>Awards</h2></A>
-<ul>
-<li>2015 & 2016, National Scholarship, Ministry of Education of the People's Republic of China
-</li>
-<li>2016, Meritorious Winner, Interdisciplinary Contest in Modeling </li>
-</ul>
-<br />
-
-
-
-<font size="3"; color="#A0A0A0";>
-<p style="text-align:center">© 2023 Yu Sun | Last Update on Mar 3, 2025</p>
-</font>
+    <div class="last-updated">
+        © 2025 Yu Sun.&nbsp; Last updated: <span id="last-updated-date">July 6, 2025</span>
+    </div>
 
 
 
 </body>
 </html>
-
-<!--
-All Rights Reserved by Yu Sun. Part of page is generated by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
--->
-
