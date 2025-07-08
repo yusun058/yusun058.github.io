@@ -108,7 +108,7 @@
         }    
         /* Style for grouped links */
         .links-group {
-            font-weight: bold;
+            font-weight: normal;
         }
         .links-group a {
             color: #007bff; /* Blue color for links */
@@ -134,6 +134,18 @@
             margin-top: 30px;
             font-size: 0.9em;
             color: gray;
+        }
+        /* Default style: Black text and no underline */
+        .author-link {
+        color: black;
+        text-decoration: none; /* Removes underline */
+        font-weight: normal; /* Avoid unnecessary boldness */
+        cursor: pointer; /* Indicates it's clickable */
+        }
+        /* Hover effect: Change color and add an underline */
+        .author-link:hover {
+        color: blue; /* Highlight the text in blue on hover */
+        text-decoration: underline; /* Add underline on hover */
         }
     </style>
 
@@ -180,7 +192,7 @@
         <h2>Biography</h2>
         <ul>
             <li>2022 &mdash; 2025&nbsp;&nbsp; Postdoctoral Fellow, Department of Applied Mathematics, The Hong Kong Polytechnic University</li>
-            <li>2017 &mdash; 2022&nbsp;&nbsp; Ph.D. in Systems Engineering and Engineering Management (Financial Engineering track), The Chinese University of Hong Kong, under the supervision of Professor <a href="https://sites.google.com/site/xuedonghepage/home" target="_blank">Xuedong He</a>
+            <li>2017 &mdash; 2022&nbsp;&nbsp; Ph.D. in Systems Engineering and Engineering Management (Financial Engineering track), The Chinese University of Hong Kong, under the supervision of Professor <a href="https://sites.google.com/site/xuedonghepage/home" class="author-link" target="_blank">Xuedong He</a>
             <li>2013 &mdash; 2017&nbsp;&nbsp; B.Sc. in Physics, Beijing Normal University        
         </ul>
     </section>
@@ -202,10 +214,10 @@
         <h2>Working Papers</h2>
         <ul>
             <li>Realization Utility Drives Diversification 
-                (with <a href="https://sites.google.com/view/jiacheng-fan/home?authuser=0" target="_blank">Jiacheng Fan</a> and <a href="https://sites.google.com/site/xuedonghepage/home" target="_blank">Xuedong He</a>):&nbsp; <strong><em>working paper</em></strong>, 2025. 
+                (with <a href="https://sites.google.com/view/jiacheng-fan/home?authuser=0" class="author-link" target="_blank">Jiacheng Fan</a> and <a href="https://sites.google.com/site/xuedonghepage/home" class="author-link" target="_blank">Xuedong He</a>):&nbsp; <strong><em>working paper</em></strong>, 2025. 
             </li>
 
-            <li>Learning to Optimally Stop Diffusion Processes, with Financial Applications (with <a href="https://sites.google.com/view/mindai/home?authuser=0">Min Dai</a>, <a href="https://www.polyu.edu.hk/ama/profile/xu/">Zuoquan Xu</a> and <a href="https://www.columbia.edu/~xz2574/index.htm" target="_blank">Xunyu Zhou</a>):&nbsp; <strong><em>submitted</em></strong>, 2024. 
+            <li>Learning to Optimally Stop Diffusion Processes, with Financial Applications (with <a href="https://sites.google.com/view/mindai/home?authuser=0" class="author-link" target="_blank">Min Dai</a>, <a href="https://www.polyu.edu.hk/ama/profile/xu/" class="author-link" target="_blank">Zuoquan Xu</a> and <a href="https://www.columbia.edu/~xz2574/index.htm" class="author-link" target="_blank">Xunyu Zhou</a>):&nbsp; <strong><em>submitted</em></strong>, 2024. 
                 <span class="links-group">
                     [<a class="abstract-btn" data-target="abstract_DaiSunXuZhou_Learning">Abstract</a>
                     <span>|</span>
@@ -218,7 +230,7 @@
                 </div>
             </li>
 
-            <li>Dynamic Portfolio Selection and Asset Pricing under Neo-Additive Probability Weighting (with <a href="https://sites.google.com/site/xuedonghepage/home" target="_blank">Xuedong He</a>):&nbsp; <strong><em>submitted</em></strong>, 2023. 
+            <li>Dynamic Portfolio Selection and Asset Pricing under Neo-Additive Probability Weighting (with <a href="https://sites.google.com/site/xuedonghepage/home" class="author-link" target="_blank">Xuedong He</a>):&nbsp; <strong><em>submitted</em></strong>, 2023. 
                 <span class="links-group">
                     [<a class="abstract-btn" data-target="abstract_HeSun_Dynamic">Abstract</a>
                     <span>|</span>
@@ -309,7 +321,7 @@
 
 
     <div class="last-updated">
-        © 2025 Yu Sun.&nbsp; Last updated: <span id="last-updated-date">July 6, 2025</span>
+        © 2025 Yu Sun.&nbsp; Last updated: <span id="last-updated-date">July 8, 2025</span>
     </div>
 
 
