@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yu Sun's Webpage</title>
@@ -149,6 +150,7 @@
         }
     </style>
 
+    <!-- Show abstract -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Attach event listeners to all buttons with the class 'abstract-btn'
@@ -156,7 +158,6 @@
                 button.addEventListener('click', () => {
                     const targetId = button.getAttribute('data-target'); // Get the target ID
                     const abstract = document.getElementById(targetId); // Find the corresponding abstract
-
                     // Toggle display
                     if (abstract.style.display === 'none' || abstract.style.display === '') {
                         abstract.style.display = 'block'; // Show the abstract
@@ -167,6 +168,28 @@
             });
         });
     </script>
+
+    <!-- Dynamically reference webpages -->
+    <script>
+    // Define all author webpages in one place
+    const authorLinks = {        
+        MinDai: "https://sites.google.com/view/mindai/home?authuser=0",
+        JiachengFan: "https://sites.google.com/view/jiacheng-fan/home?authuser=0",
+        XuedongHe: "https://sites.google.com/site/xuedonghepage/home",
+        ZuoquanXu: "https://www.polyu.edu.hk/ama/profile/xu/",
+        XunyuZhou: "https://www.columbia.edu/~xz2574/index.htm"
+    };
+    // Dynamically insert the links
+    window.onload = function () {
+        document.querySelectorAll("[data-author]").forEach(link => {
+        const authorKey = link.getAttribute("data-author");
+        if (authorLinks[authorKey]) {
+            link.href = authorLinks[authorKey];
+        }
+        });
+    };
+    </script>
+
 </head>
 
 <body>
@@ -192,7 +215,7 @@
         <h2>Biography</h2>
         <ul>
             <li>2022 &mdash; 2025&nbsp;&nbsp; Postdoctoral Fellow, Department of Applied Mathematics, The Hong Kong Polytechnic University</li>
-            <li>2017 &mdash; 2022&nbsp;&nbsp; Ph.D. in Systems Engineering and Engineering Management (Financial Engineering track), The Chinese University of Hong Kong, under the supervision of Professor <a href="https://sites.google.com/site/xuedonghepage/home" class="author-link" target="_blank">Xuedong He</a>
+            <li>2017 &mdash; 2022&nbsp;&nbsp; Ph.D. in Systems Engineering and Engineering Management (Financial Engineering track), The Chinese University of Hong Kong, under the supervision of Professor <a data-author="XuedongHe" class="author-link" target="_blank">Xuedong He</a>
             <li>2013 &mdash; 2017&nbsp;&nbsp; B.Sc. in Physics, Beijing Normal University        
         </ul>
     </section>
@@ -214,10 +237,10 @@
         <h2>Working Papers</h2>
         <ul>
             <li>Realization Utility Drives Diversification 
-                (with <a href="https://sites.google.com/view/jiacheng-fan/home?authuser=0" class="author-link" target="_blank">Jiacheng Fan</a> and <a href="https://sites.google.com/site/xuedonghepage/home" class="author-link" target="_blank">Xuedong He</a>):&nbsp; <strong><em>working paper</em></strong>, 2025. 
+                (with <a data-author="JiachengFan" class="author-link" target="_blank">Jiacheng Fan</a> and <a data-author="XuedongHe" class="author-link" target="_blank">Xuedong He</a>):&nbsp; <strong><em>working paper</em></strong>, 2025. 
             </li>
 
-            <li>Learning to Optimally Stop Diffusion Processes, with Financial Applications (with <a href="https://sites.google.com/view/mindai/home?authuser=0" class="author-link" target="_blank">Min Dai</a>, <a href="https://www.polyu.edu.hk/ama/profile/xu/" class="author-link" target="_blank">Zuoquan Xu</a> and <a href="https://www.columbia.edu/~xz2574/index.htm" class="author-link" target="_blank">Xunyu Zhou</a>):&nbsp; <strong><em>submitted</em></strong>, 2024. 
+            <li>Learning to Optimally Stop Diffusion Processes, with Financial Applications (with <a data-author="MinDai" class="author-link" target="_blank">Min Dai</a>, <a data-author="ZuoquanXu" class="author-link" target="_blank">Zuoquan Xu</a> and <a data-author="XunyuZhou" class="author-link" target="_blank">Xunyu Zhou</a>):&nbsp; <strong><em>submitted</em></strong>, 2024. 
                 <span class="links-group">
                     [<a class="abstract-btn" data-target="abstract_DaiSunXuZhou_Learning">Abstract</a>
                     <span>|</span>
@@ -230,7 +253,7 @@
                 </div>
             </li>
 
-            <li>Dynamic Portfolio Selection and Asset Pricing under Neo-Additive Probability Weighting (with <a href="https://sites.google.com/site/xuedonghepage/home" class="author-link" target="_blank">Xuedong He</a>):&nbsp; <strong><em>submitted</em></strong>, 2023. 
+            <li>Dynamic Portfolio Selection and Asset Pricing under Neo-Additive Probability Weighting (with <a data-author="XuedongHe" class="author-link" target="_blank">Xuedong He</a>):&nbsp; <strong><em>submitted</em></strong>, 2023. 
                 <span class="links-group">
                     [<a class="abstract-btn" data-target="abstract_HeSun_Dynamic">Abstract</a>
                     <span>|</span>
@@ -321,7 +344,7 @@
 
 
     <div class="last-updated">
-        © 2025 Yu Sun.&nbsp; Last updated: <span id="last-updated-date">July 8, 2025</span>
+        © 2025 Yu Sun.&nbsp; Last updated: <span id="last-updated-date">July 9, 2025</span>
     </div>
 
 
