@@ -24,8 +24,8 @@
             margin: -5px; /* Remove default margins */
         }
         img {
-            width: 200px;
-            height: 200px;
+            width: 255px;
+            height: 255px;
             border-radius: 50%;
             object-fit: scale-down;
             margin-right: 15px;
@@ -76,7 +76,7 @@
         }
         .code {
             font-family: 'Consolas', monospace; /*  Use monospaced font for code */
-            width: 100px; /* Fixed width for alignment */
+            width: 115px; /* Fixed width for alignment */
             display: inline-block; /* Keeps code in its own block */
         }
         .description {
@@ -148,7 +148,63 @@
         color: blue; /* Highlight the text in blue on hover */
         text-decoration: underline; /* Add underline on hover */
         }
+        .line {
+        display: grid;
+        grid-template-columns: 7rem 1fr; /* 左列固定宽度，右列自适应 */
+        column-gap: .0rem;
+        margin: .5rem 0;
+        }
+        .label { font-weight: 0; }
+        .value { /* 可选：控制行高与断行 */
+        line-height: 1.6;
+        word-break: break-word;     /* 避免超长单词溢出 */
+        }
+        /* 结构：两列网格 + 自定义圆点 */
+        ul.exp {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        }
+        ul.exp > li {
+        display: grid;
+        grid-template-columns: 7.5rem 1fr;  /* 左时间列 + 右内容列 */
+        column-gap: .6rem;
+        align-items: start;
+        margin: .6rem 0;
+        position: relative;                /* 供左侧圆点横向定位 */
+        padding-left: 1.15rem;              /* 给圆点留出空间 */
+        }
+        /* 关键：把右侧内容设为定位参考，这样圆点能对齐“第一行文字中心” */
+        ul.exp .role {
+        position: relative;
+        line-height: 1.6;                  /* 你的正文行高 */
+        }
+        /* 圆点：纵向对齐 .role 第一行中线，横向固定在左侧空白中 */
+        ul.exp > li::before {
+        content: "";
+        position: absolute;
+        left: 0.35rem;                      /* 圆点距离 li 左边的偏移，可微调 */
+        top: calc(0.8em);                   /* 关键：按第一行的中线放置（0.8≈1.6/2） */
+        width: .38rem;
+        height: .38rem;
+        border-radius: 50%;
+        background: #000;
+        transform: translateY(-50%);        /* 精准居中于第一行 */
+        pointer-events: none;
+        }
+        /* 左列时间样式 */
+        ul.exp .time {
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+        font-weight: 0;
+        }
+        /* 链接保持蓝色（可按需调整） */
+        /* ul.exp .role a { color:#0b5fff; text-decoration: underline; } */
+        /* ul.exp .role a:visited { color:#6b21a8; } */
+        /* ul.exp .role a:hover { color:#0848cc; } */
     </style>
+
+
 
     <!-- Show abstract -->
     <script>
@@ -199,9 +255,32 @@
         <div>
             <h1>Yu Sun <span>(孙羽)</span></h1>
             <p><strong>Assistant Professor</strong></p>
-            <p>Peking University HSBC Business School</p>
-            <p>Mailing Address: Room 747, Peking University HSBC Business School, University Town, Nanshan District, Shenzhen, Guangdong Province, China, 518055</p>
-            <p>Email: yusun[at]phbs.pku.edu.cn; yusun017[at]gmail.com</p>
+            <p><a href="https://english.phbs.pku.edu.cn/index.htm" class="author-link" target="_blank">Peking University HSBC Business School</a></p>
+            <!-- <p><a href="https://english.pkusz.edu.cn/" class="author-link" target="_blank">Peking University Shenzhen Graduate School</a></p> -->
+            <p class="line">
+                <span class="label">Official page:</span>
+                <span class="value">
+                    <a href="https://english.phbs.pku.edu.cn/info/3812/47762.htm" class="author-link" target="_blank">https://english.phbs.pku.edu.cn/info/3812/47762.htm</a></p>
+                </span>
+            </p>
+            <p class="line">
+                <span class="label">Address:</span>
+                <span class="value">
+                    Room 747, Peking University HSBC Business School, University Town of Shenzhen, Nanshan District, Shenzhen 518055, P.R.China
+                </span>
+            </p>
+            <p class="line">
+                <span class="label">Email:</span>
+                <span class="value">
+                    yusun[at]phbs.pku.edu.cn; yusun017[at]gmail.com
+                </span>
+            </p>
+            <p class="line">
+                <span class="label">Phone:</span>
+                <span class="value">
+                    (+86) 755 2603 3096
+                </span>
+            </p>
         </div>
     </section>
 
@@ -209,11 +288,25 @@
 
     <section>
         <h2>Biography</h2>
-        <ul>
-            <li>2025 &mdash; present&nbsp; Assistant Professor, Peking University HSBC Business School</li>
-            <li>2022 &mdash; 2025&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Postdoctoral Fellow, Department of Applied Mathematics, The Hong Kong Polytechnic University</li>
-            <li>2017 &mdash; 2022&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ph.D. in Systems Engineering and Engineering Management (Financial Engineering track), The Chinese University of Hong Kong, under the supervision of Professor <a data-author="XuedongHe" class="author-link" target="_blank">Xuedong He</a>
-            <li>2013 &mdash; 2017&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B.Sc. in Physics, Beijing Normal University        
+        <ul class="exp">
+            <li>
+                <div class="time">2025 — present</div>
+                <div class="role">Assistant Professor, Peking University HSBC Business School</div>
+            </li>
+            <li>
+                <div class="time">2022 — 2025</div>
+                <div class="role">Postdoctoral Fellow, Department of Applied Mathematics, The Hong Kong Polytechnic University</div>
+            </li>
+            <li>
+                <div class="time">2017 — 2022</div>
+                <div class="role">Ph.D. in Systems Engineering and Engineering Management (Financial Engineering track), 
+                    <br>The Chinese University of Hong Kong, under the supervision of Professor 
+                    <a data-author="XuedongHe" class="author-link" target="_blank">Xuedong He</a></div>
+            </li>
+            <li>
+                <div class="time">2013 — 2017</div>
+                <div class="role">B.Sc. in Physics, Beijing Normal University</div>
+            </li>
         </ul>
     </section>
 
@@ -341,7 +434,7 @@
 
 
     <div class="last-updated">
-        © 2025 Yu Sun.&nbsp; Last updated: <span id="last-updated-date">August 18, 2025</span>
+        © 2025 Yu Sun.&nbsp; Last updated: <span id="last-updated-date">September 4, 2025</span>
     </div>
 
 
